@@ -1,0 +1,367 @@
+<!-- PÁGINA WEB PARA MI AMOR -->
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#140c14" />
+    <title>Para Mickaela 🤍</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,600&family=Great+Vibes&family=Playfair+Display:ital,wght@1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page-glow" aria-hidden="true"></div>
+
+    <div id="splash-screen" class="splash-screen">
+      <div class="splash-orbs" aria-hidden="true"></div>
+      <div class="splash-content">
+        <span class="pulse-heart">🤍</span>
+        <p class="splash-kicker">Un detalle solo para ti</p>
+        <h1>Mickaela</h1>
+        <p class="splash-sub">Toca para abrir tu regalo especial</p>
+        <button id="open-btn" class="open-btn" type="button">Abrir sorpresa</button>
+      </div>
+    </div>
+
+    <div class="mobile-frame">
+      <div class="particles" id="particles"></div>
+
+      <header class="header">
+        <span class="badge">Feliz Cumpleaños</span>
+        <h2>Para el amor de mi vida</h2>
+        <p class="header-line">Hoy, siempre y en cada canción</p>
+      </header>
+
+      <section class="music-section">
+        <article class="player-card window-card" id="player-card" aria-label="Reproductor de nuestra canción">
+          <div class="player-aura" aria-hidden="true"></div>
+          <div class="click-burst" id="click-burst" aria-hidden="true"></div>
+
+          <div class="vinyl-container">
+            <div class="vinyl-disc" id="vinyl">
+              <div class="vinyl-grooves"></div>
+              <div class="vinyl-center">M</div>
+            </div>
+            <button class="album-cover" id="album-cover" type="button" aria-label="Revelar portada y reproducir">
+              <div class="cover-flip">
+                <div class="cover-face cover-front">
+                  <div class="cover-shine"></div>
+                  <div class="cover-inner">
+                    <span class="song-title-tag">Nuestra Canción</span>
+                    <h3>Mickaela</h3>
+                    <p class="cover-hint">Toca para revelar la portada</p>
+                  </div>
+                </div>
+                <div class="cover-face cover-back">
+                  <img id="cover-art" src="PortadaCancion.png" alt="Portada de nuestra canción" />
+                  <div class="cover-art-fallback" id="cover-art-fallback">Portada</div>
+                </div>
+              </div>
+            </button>
+          </div>
+
+          <div class="song-info">
+            <h3 id="track-title">Nuestra Canción</h3>
+            <p id="track-subtitle">Compuesta con todo mi amor</p>
+          </div>
+
+          <div class="time-bar">
+            <span id="time-current">0:00</span>
+            <div
+              class="progress-wrap"
+              id="progress-wrap"
+              role="slider"
+              aria-label="Tiempo de la canción"
+              aria-valuemin="0"
+              aria-valuemax="0"
+              aria-valuenow="0"
+            >
+              <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <span id="time-duration">0:00</span>
+          </div>
+
+          <div class="player-controls">
+            <button id="play-btn" class="play-circle-btn" type="button" aria-label="Reproducir">
+              <svg id="play-icon" viewBox="0 0 24 24" width="26" height="26">
+                <path fill="currentColor" d="M8 5v14l11-7z" />
+              </svg>
+            </button>
+          </div>
+        </article>
+
+        <audio id="bg-audio" loop preload="auto">
+          <source src="Bajo_la_luna_de_Cedar_Point.mp3" type="audio/mpeg" />
+        </audio>
+      </section>
+
+      <section class="carousel-section">
+        <div class="section-title">
+          <h3>Nuestros Momentos</h3>
+          <span>Toca una foto para verla grande</span>
+        </div>
+
+        <div class="carousel-container" id="carousel">
+          <!-- FOTO 1: cambia fotos/1.png por tu archivo -->
+          <article class="polaroid window-card is-active" data-index="0">
+            <div class="photo-box">
+              <img src="fotos/1.png" alt="Foto 1" />
+            </div>
+            <p>Tu sonrisa es la más bonita</p>
+          </article>
+          <!-- FOTO 2 -->
+          <article class="polaroid window-card" data-index="1">
+            <div class="photo-box">
+              <img src="fotos/2.png" alt="Foto 2" />
+            </div>
+            <p>Contigo cada momento es lindo</p>
+          </article>
+          <!-- FOTO 3 -->
+          <article class="polaroid window-card" data-index="2">
+            <div class="photo-box">
+              <img src="fotos/3.png" alt="Foto 3" />
+            </div>
+            <p>Mi lugar favorito en el mundo</p>
+          </article>
+          <!-- FOTO 4 -->
+          <article class="polaroid window-card" data-index="3">
+            <div class="photo-box">
+              <img src="fotos/4.png" alt="Foto 4" />
+            </div>
+            <p>Te amo hoy y siempre</p>
+          </article>
+          <!-- FOTO 5 -->
+          <article class="polaroid window-card" data-index="4">
+            <div class="photo-box">
+              <img src="fotos/5.png" alt="Foto 5" />
+            </div>
+            <p>Nuestras risas infinitas</p>
+          </article>
+          <!-- FOTO 6 -->
+          <article class="polaroid window-card" data-index="5">
+            <div class="photo-box">
+              <img src="fotos/6.png" alt="Foto 6" />
+            </div>
+            <p>Tú</p>
+          </article>
+          <!-- FOTO 7 -->
+          <article class="polaroid window-card" data-index="6">
+            <div class="photo-box">
+              <img src="fotos/7.png" alt="Foto 7" />
+            </div>
+            <p>Tus ojos, mi cielo</p>
+          </article>
+          <!-- FOTO 8 -->
+          <article class="polaroid window-card" data-index="7">
+            <div class="photo-box">
+              <img src="fotos/8.png" alt="Foto 8" />
+            </div>
+            <p>Juntitos</p>
+          </article>
+          <!-- FOTO 9 -->
+          <article class="polaroid window-card" data-index="8">
+            <div class="photo-box">
+              <img src="fotos/9.png" alt="Foto 9" />
+            </div>
+            <p>Nuestros abrazos</p>
+          </article>
+          <!-- FOTO 10 -->
+          <article class="polaroid window-card" data-index="9">
+            <div class="photo-box">
+              <img src="fotos/10.png" alt="Foto 10" />
+            </div>
+            <p>Tú y yo, siempre</p>
+          </article>
+          <!-- FOTO 11 -->
+          <article class="polaroid window-card" data-index="10">
+            <div class="photo-box">
+              <img src="fotos/11.png" alt="Foto 11" />
+            </div>
+            <p>Nuestras personitas en Lego</p>
+          </article>
+          <!-- FOTO 12 -->
+          <article class="polaroid window-card" data-index="11">
+            <div class="photo-box">
+              <img src="fotos/12.png" alt="Foto 12" />
+            </div>
+            <p>Nuestra conexión es única</p>
+          </article>
+          <!-- FOTO 13 -->
+          <article class="polaroid window-card" data-index="12">
+            <div class="photo-box">
+              <img src="fotos/13.png" alt="Foto 13" />
+            </div>
+            <p>Mi persona favorita</p>
+          </article>
+          <!-- FOTO 14 -->
+          <article class="polaroid window-card" data-index="13">
+            <div class="photo-box">
+              <img src="fotos/14.png" alt="Foto 14" />
+            </div>
+            <p>Amor en cada detalle</p>
+          </article>
+          <!-- FOTO 15 -->
+          <article class="polaroid window-card" data-index="14">
+            <div class="photo-box">
+              <img src="fotos/15.png" alt="Foto 15" />
+            </div>
+            <p>Tus Locuras</p>
+          </article>
+          <!-- FOTO 16 -->
+          <article class="polaroid window-card" data-index="15">
+            <div class="photo-box">
+              <img src="fotos/16.png" alt="Foto 16" />
+            </div>
+            <p>Tú y yo Monitos</p>
+          </article>
+          <!-- FOTO 17 -->
+          <article class="polaroid window-card" data-index="16">
+            <div class="photo-box">
+              <img src="fotos/17.png" alt="Foto 17" />
+            </div>
+            <p>Mickaela y Martin</p>
+          </article>
+          <!-- FOTO 18 -->
+          <article class="polaroid window-card" data-index="17">
+            <div class="photo-box">
+              <img src="fotos/18.png" alt="Foto 18" />
+            </div>
+            <p>Hasta Viejitoooooos</p>
+          </article>
+          <!-- FOTO 19 -->
+          <article class="polaroid window-card" data-index="18">
+            <div class="photo-box">
+              <img src="fotos/19.png" alt="Foto 19" />
+            </div>
+            <p>Amor De Mi Vida</p>
+          </article>
+          <!-- FOTO 20 -->
+          <article class="polaroid window-card" data-index="19">
+            <div class="photo-box">
+              <img src="fotos/20.png" alt="Foto 20" />
+            </div>
+            <p>Te amo. Te amo. Te amo.</p>
+          </article>
+          <!-- FOTO 21 -->
+          <article class="polaroid window-card" data-index="20">
+            <div class="photo-box">
+              <img src="fotos/21.png" alt="Foto 21" />
+            </div>
+            <p>Nuestros Besos en Chicago</p>
+          </article>
+          <!-- FOTO 22 -->
+          <article class="polaroid window-card" data-index="21">
+            <div class="photo-box">
+              <img src="fotos/22.png" alt="Foto 22" />
+            </div>
+            <p>Tu Ternura</p>
+          </article>
+          <!-- FOTO 23 -->
+          <article class="polaroid window-card" data-index="22">
+            <div class="photo-box">
+              <img src="fotos/23.png" alt="Foto 23" />
+            </div>
+            <p>Nuestros Recuerdos en CP</p>
+          </article>
+          <!-- FOTO 24 -->
+          <article class="polaroid window-card" data-index="23">
+            <div class="photo-box">
+              <img src="fotos/24.png" alt="Foto 24" />
+            </div>
+            <p>Una Foto Que Te Encanta</p>
+          </article>
+          <!-- FOTO 25 -->
+          <article class="polaroid window-card" data-index="24">
+            <div class="photo-box">
+              <img src="fotos/25.png" alt="Foto 25" />
+            </div>
+            <p>Mi corazón te eligió</p>
+          </article>
+          <!-- FOTO 26 -->
+          <article class="polaroid window-card" data-index="25">
+            <div class="photo-box">
+              <img src="fotos/26.png" alt="Foto 26" />
+            </div>
+            <p>Cada foto, un te quiero</p>
+          </article>
+          <!-- FOTO 27 -->
+          <article class="polaroid window-card" data-index="26">
+            <div class="photo-box">
+              <img src="fotos/27.png" alt="Foto 27" />
+            </div>
+            <p>Bravaaaaaaaaa</p>
+          </article>
+          <!-- FOTO 28 -->
+          <article class="polaroid window-card" data-index="27">
+            <div class="photo-box">
+              <img src="fotos/28.png" alt="Foto 28" />
+            </div>
+            <p>Eres Mi Felicidad Princesa</p>
+          </article>
+          <!-- FOTO 29 -->
+          <article class="polaroid window-card" data-index="28">
+            <div class="photo-box">
+              <img src="fotos/29.png" alt="Foto 29" />
+            </div>
+            <p>Hoy celebro tu vida</p>
+          </article>
+          <!-- FOTO 30 -->
+          <article class="polaroid window-card" data-index="29">
+            <div class="photo-box">
+              <img src="fotos/30.png" alt="Foto 30" />
+            </div>
+            <p>Para toda la Vida, Mi Vida</p>
+          </article>
+        </div>
+        <div class="carousel-dots" id="dots"></div>
+      </section>
+
+      <section class="letter-section">
+        <div class="letter-card window-card">
+          <div class="letter-header">
+            <span>Para Mickaela</span>
+            <span class="letter-heart">♥</span>
+          </div>
+          <p class="letter-body">
+            Mi amor, hoy en tu cumpleaños quise crear algo único para ti. Esta canción y está pagina web lleva pedacitos
+            de lo que siento cuando estoy a tu lado, de tus risas y de la magia que traes a mi vida. Gracias por ser esa
+            persona tan especial, por tu ternura y por cada momento compartido. Espero que este detalle te haga sonreír
+            tanto como tú lo haces conmigo. Feliz cumpleaños mi amor !!
+          </p>
+          <p class="letter-signature">Por siempre tuyo 🤍</p>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p class="footer-love">con <span>AMOR:</span></p>
+        <p class="footer-from">Tu Pipón</p>
+      </footer>
+    </div>
+
+    <div class="lightbox" id="lightbox" hidden>
+      <div class="lightbox-bg"></div>
+      <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Cerrar">✕</button>
+      <p class="lightbox-counter" id="lightbox-counter">1 / 30</p>
+
+      <button class="lightbox-nav prev" id="lightbox-prev" type="button" aria-label="Foto anterior">‹</button>
+      <button class="lightbox-nav next" id="lightbox-next" type="button" aria-label="Foto siguiente">›</button>
+
+      <div class="lightbox-stage" id="lightbox-stage">
+        <figure class="lightbox-slide is-active" id="lightbox-slide">
+          <div class="lightbox-photo">
+            <img id="lightbox-img" alt="" />
+            <div class="lightbox-fallback" id="lightbox-fallback">Foto 1</div>
+          </div>
+          <figcaption id="lightbox-caption"></figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
